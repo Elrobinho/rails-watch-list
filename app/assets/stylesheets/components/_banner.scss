@@ -1,0 +1,25 @@
+.main-banner {
+  display: flex;
+  weight: 100%;
+  height: 10vh;
+  background-color: #B3B3B3;
+  h1{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+}
+
+.secondary-banner{
+  display: flex;
+  weight: 100%;
+  height: 10vh;
+  background-color: #0B3BD2;
+  ul{
+    display:flex;
+    color: #B3B3B3;
+    text-align: center;
+    justify-content: center;
+    font-size: 33px;
+  }
+}

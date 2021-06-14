@@ -1,0 +1,21 @@
+<h1 class = main-banner >Lists</h1>
+<p>Find me in app/views/lists/show.html.erb</p>
+<h2><%= @list.name %></h2>
+<%= link_to "back to all lists", lists_path %>
+
+<%= link_to "Add a movie to this list", new_list_bookmark_path(@list) %>
+
+<%= link_to "Delete #{@list.name}",
+            list_path(@list),
+            method: :delete,
+            data: { confirm: "Are you sure?" } %>
+
+<% console %>
+
+<div class= "secondary-banner">
+  <% @list.bookmarks.each do |bookmark| %>
+  <% movie = Movie.find(bookmark.movie_id) %>
+  <% comment = bookmark.comment %>
+  <ul class= "secondary-banner"> <%= "#{movie.title}: #{comment}" %> </ul>
+<% end %>
+</div>
